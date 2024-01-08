@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "name": "docker-smoketest",
+  "description": "Docker image to display a basic web app with some additional health checks (DB, pings)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sleroy/docker-smoketest.git"
+  },
+  "keywords": [
+    "docker",
+    "container",
+    "smoketest"
+  ],
+  "author": "Sylvain Leroy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sleroy/docker-smoketest/issues"
+  },
+  "homepage": "https://github.com/sleroy/docker-smoketest#readme"
+}
