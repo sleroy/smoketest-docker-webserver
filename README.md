@@ -84,3 +84,12 @@ docker run -p 80:80 -v /path/to/config.json:/app/config.json docker-smoketest:la
 This project is licensed under the MIT License.
 
 Feel free to contribute, report issues, or provide suggestions. Happy containerizing!
+
+## Roadmap
+
+- [ ] Support of SecretManager
+- [ ] Support of SSM ParameterStore to load the configuration
+- [ ] Support of MongoDB
+- [ ] Support of DynamoDB
+- [ ] Support of S3 healthchecks
+- [ ] Asynchronous checks
