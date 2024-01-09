@@ -91,5 +91,5 @@ Feel free to contribute, report issues, or provide suggestions. Happy containeri
 - [ ] Support of SSM ParameterStore to load the configuration
 - [ ] Support of MongoDB
 - [ ] Support of DynamoDB
-- [ ] Support of S3 healthchecks
+- [ ] Support of S3 health checks
 - [ ] Asynchronous checks

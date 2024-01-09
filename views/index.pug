@@ -37,11 +37,11 @@ block content
   if healthchecks
     h2 Healthchecks
     each hh in healthchecks
-      h2 Port scan #{hh.ip} #{hh.port}
+      h3 Port scan #{hh.ip} #{hh.port}
       if hh.status == "SUCCESS"
-        h3(class="lblsuccess") Port is opened
+        h4(class="lblsuccess") Port is opened
       else       
-        h3(class="lblfailure") Port is closed
+        h4(class="lblfailure") Port is closed
         h4 Reason :
         pre
           code
