@@ -2,6 +2,8 @@
 
 Docker image to display a basic web app with some additional health checks (DB, pings)
 
+![Screenshot](./screenshot.png)
+
 ## Overview
 
 Docker SmokeTest is a project aimed at providing a Docker image designed for cloud-based container architectures such as AWS ECS, AWS EKS, or GCP GKE. The image includes a basic web page exposed on port 80, displaying essential server information, including hostname and IP addresses. Additionally, the image facilitates health checks, including database connection tests for MySQL/MariaDB/PGQL, MongoDB, and DynamoDB.
