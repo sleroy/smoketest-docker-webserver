@@ -1,0 +1,43 @@
+extends layout
+
+block content
+  h1 Welcome to #{hostname}
+
+  h2 Server details
+
+  p 
+  | Hostname is :  
+  em #{hostname}
+  
+  h2 Network configuration
+  
+  table
+    caption List of network interfaces and IP
+    thead 
+      tr
+        th Interface name
+        th Addresses
+    tbody
+      each addr, itf in addresses
+        tr
+          td #{itf}
+          td #{addr}          
+  
+  if database
+    h2 Database connection to #{database.config.host} of type #{database.config.type}
+    if database.status == "SUCCESS"
+      h3(class="lblsuccess") Database connection established with success
+    else       
+      h3(class="lblfailure") Database connection has failed
+      h4 Reason :
+      pre
+        code
+        | #{database.error}
+  
+
+  h2 Healthchecks
+
+
+
+
+

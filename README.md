@@ -8,17 +8,17 @@ Docker SmokeTest is a project aimed at providing a Docker image designed for clo
 
 ## Features
 
-* **Basic Web Page**: The Docker image exposes a simple web page on port 80, showcasing server details.
+- **Basic Web Page**: The Docker image exposes a simple web page on port 80, showcasing server details.
 
-* **Hostname and IP Display**: The web page displays the hostname and IP addresses of the servers, aiding in quick identification.
+- **Hostname and IP Display**: The web page displays the hostname and IP addresses of the servers, aiding in quick identification.
 
-* **Healthchecks**: The image includes healthchecks to ensure the availability and connectivity of various databases:
-  
-  * MySQL/MariaDB/PGQL
-  * MongoDB
-  * DynamoDB
+- **Health checks**: The image includes healthchecks to ensure the availability and connectivity of various databases:
 
-* **Configuration Options**: Healthcheck configurations can be customized either through a JSON file or via environment variables, offering flexibility in adapting to different environments.
+  - MySQL/MariaDB/PGQL
+  - MongoDB
+  - DynamoDB
+
+- **Configuration Options**: Healthcheck configurations can be customized either through a JSON file or via environment variables, offering flexibility in adapting to different environments.
 
 ## Usage
 
@@ -49,27 +49,29 @@ docker run -p 80:80 -v /path/to/config.json:/app/config.json docker-smoketest:la
 
 ```
 
-### Environment 
+### Environment
 
-* **DB_TYPE**: Database type (mysql, mongodb, dynamodb, etc.).
-* **DB_HOST**: Database host address.
-* **DB_PORT**: Database port.
-* **DB_USER**: Database username.
-* **DB_PASSWORD**: Database password.
+- **DB_TYPE**: Database type (mysql, mongodb, dynamodb, etc.).
+- **DB_HOST**: Database host address.
+- **DB_PORT**: Database port.
+- **DB_USER**: Database username.
+- **DB_PASSWORD**: Database password.\*\*: Database password.
+- **DB_TIMEOUT**: Database connection timeout
 
-## Healthcheck Configuration
+## Database connection configuration
 
 ### JSON Format
 
 ```json
-
 {
   "database": {
     "type": "mysql",
     "host": "my-database-host",
     "port": 3306,
     "user": "myuser",
-    "password": "mypassword"
+    "password": "mypassword",
+    "timeout": 5000,
+    "debug": false
   }
 }
 ```

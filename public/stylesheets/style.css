@@ -1,9 +1,24 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #00B7FF;
+ 
 }
 
-a {
-  color: #00B7FF;
+.lblsuccess {
+  background-color: green;
+  color: white;
+  padding: 20px;
+}
+.lblfailure {
+  background-color: #B70000;
+  color: white;
+  padding: 10px;
+}
+
+
+.lbl-success: {
+  background-color: green;
+  color: white; /* Set text color to white for better visibility on green background */
+  padding: 10px; /* Add some padding for better aesthetics */
+  /*background-color: #00B700;*/
 }

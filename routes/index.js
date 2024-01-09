@@ -1,14 +1,32 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
-var utils = require('../lib/utils')
+var logger = require("../lib/logger");
+var utils = require("../lib/utils");
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  const addresses = utils.getServerIP();
-  const hostname = utils.getHostname();
+function loadRoutes(config) {
+  /* GET home page. */
+  router.get("/", async (req, res, next) => {
+    try {
+      const addresses = utils.getServerIP();
+      const hostname = utils.getHostname();
+      const databaseConnection = await utils.testDatabaseConnection(config);
+      const healthchecks = await utils.testHealthChecks(config);
 
-  res.render('index', { title: 'WebServer', addresses,hostname});
-});
+      res.render("index", {
+        title: "WebServer",
+        addresses,
+        hostname,
+        database: databaseConnection,
+        healthchecks,
+      });
+    } catch (err) {
+      logger.error("Cannot prepare the page");
+      next(err);
+    }
+  });
 
-module.exports = router;
+  return router;
+}
+
+module.exports = loadRoutes;
