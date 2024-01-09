@@ -74,7 +74,8 @@ docker run -p 80:80 -v /path/to/config.json:/app/config.json docker-smoketest:la
     "password": "mypassword",
     "timeout": 5000,
     "debug": false
-  }
+  },
+  "healthchecks": [{ "ip": "127.0.0.1", "port": 80 }]
 }
 ```
 
