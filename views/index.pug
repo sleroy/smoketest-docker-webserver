@@ -7,7 +7,7 @@ block content
 
   p 
   | Hostname is :  
-  em #{hostname}
+  em(class="lblinfo") #{hostname}
   
   h2 Network configuration
   
@@ -25,7 +25,7 @@ block content
   
   if database
     h2 Database connection to #{database.config.host} of type #{database.config.type}
-    if database.status == "SUCCESS"
+    if database.status == "SUCCESS" 
       h3(class="lblsuccess") Database connection established with success
     else       
       h3(class="lblfailure") Database connection has failed
@@ -33,9 +33,19 @@ block content
       pre
         code
         | #{database.error}
-  
 
-  h2 Healthchecks
+  if healthchecks
+    h2 Healthchecks
+    each hh in healthchecks
+      h2 Port scan #{hh.ip} #{hh.port}
+      if hh.status == "SUCCESS"
+        h3(class="lblsuccess") Port is opened
+      else       
+        h3(class="lblfailure") Port is closed
+        h4 Reason :
+        pre
+          code
+          | #{database.error}
 
 
 

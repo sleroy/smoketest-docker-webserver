@@ -4,6 +4,12 @@ body {
  
 }
 
+.lblinfo {
+  background-color: #29cee2;
+  color: white;
+  padding: 10px;
+}
+
 .lblsuccess {
   background-color: green;
   color: white;
