@@ -2,6 +2,8 @@
 
 Docker image to display a basic web app with some additional health checks (DB, pings)
 
+[![Docker Image CI](https://github.com/sleroy/smoketest-docker-webserver/actions/workflows/docker-image.yml/badge.svg)](https://github.com/sleroy/smoketest-docker-webserver/actions/workflows/docker-image.yml)
+
 ![Screenshot](./screenshot.png)
 
 ## Overview
