@@ -33,11 +33,21 @@ Docker SmokeTest is a project aimed at providing a Docker image designed for clo
 
 ## Usage
 
-### Docker Image Pull
+## TL / DR
+
+Pull the docker image
 
 ```bash
-docker pull docker-smoketest:latest
+docker run ghcr.io/sleroy/smoketest-docker-webserver:main -p 3000:3000      
 ```
+
+Launch the container : 
+
+```bash
+ docker run --rm -i -t -p 3000:3000  ghcr.io/sleroy/smoketest-docker-webserver:main
+```
+
+Open your browser to the adress `localhost:3000`.
 
 ### Run with Environment Variables
 
