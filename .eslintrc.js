@@ -3,7 +3,9 @@ module.exports = {
     browser: true,
     es2021: true,
     node: true,
+    "jest/globals": true,
   },
+  plugins: ["jest"],
   extends: ["prettier", "eslint:recommended"],
   overrides: [
     {
