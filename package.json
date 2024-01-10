@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "HEALTHCHECK_1=localhost:22 HEALTHCHECK_2=localhost:80 DB_TYPE=postgres DB_HOST=localhost DB_PASSWORD=admin DB_USER=postgres DB_NAME=blog DB_PORT=3306 DB_DEBUG=true DB_TIMEOUT=10000 nodemon ./bin/www"
+    "dev": "HEALTHCHECK_1=localhost:22 HEALTHCHECK_2=localhost:80 DB_TYPE=postgres DB_HOST=localhost DB_PASSWORD=admin DB_USER=postgres DB_NAME=blog DB_PORT=3306 DB_DEBUG=true DB_TIMEOUT=10000 nodemon ./bin/www",
+    "pm2": "pm2 start processes.json --no-daemon",
+    "start": "node ./bin/www",
+    "test": "jest"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -15,6 +18,7 @@
     "morgan": "~1.9.1",
     "mysql2": "^3.7.0",
     "pg": "^8.11.3",
+    "pm2": "^5.3.0",
     "pug": "^3.0.2",
     "winston": "^3.11.0"
   },
