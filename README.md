@@ -6,6 +6,8 @@ Docker image to display a basic web app with some additional health checks (DB, 
 
 [![Node.js CI](https://github.com/sleroy/smoketest-docker-webserver/actions/workflows/node.js.yml/badge.svg)](https://github.com/sleroy/smoketest-docker-webserver/actions/workflows/node.js.yml)
 
+[![CodeQL](https://github.com/sleroy/smoketest-docker-webserver/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/sleroy/smoketest-docker-webserver/actions/workflows/github-code-scanning/codeql)
+
 ![Screenshot](./screenshot.png)
 
 ## Overview
