@@ -19,7 +19,7 @@ jobs:
         run: |
           echo $DOCKER_TOKEN | docker login -u $DOCKER_USER --password-stdin
       - name: Build the Docker image
-        run: docker build . --tag smoketest-docker-webserver:$(date +%s)
+        run: docker build . --tag smoketest-docker-webserver:latest
       - name: Tag the image
         run: docker tag smoketest-docker-webserver ${{secrets.DOCKER_USER}}/smoketest-docker-webserver:$(date +%s)
       - name: Docker push
