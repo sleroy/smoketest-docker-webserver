@@ -22,8 +22,12 @@ block content
         tr
           td #{itf}
           td #{addr}          
-  
-  if database
+
+  if !database  
+  h2 Database connection
+  p No connection has been defined
+
+  if database && database.config
     h2 Database connection to #{database.config.host} of type #{database.config.type}
     if database.status == "SUCCESS" 
       h3(class="lblsuccess") Database connection established with success
@@ -34,18 +38,19 @@ block content
         code
         | #{database.error}
 
-  if healthchecks
-    h2 Healthchecks
-    each hh in healthchecks
-      h3 Port scan #{hh.ip} #{hh.port}
-      if hh.status == "SUCCESS"
-        h4(class="lblsuccess") Port is opened
-      else       
-        h4(class="lblfailure") Port is closed
-        h4 Reason :
-        pre
-          code
-          | #{database.error}
+  h2 Healthchecks
+  if healthchecks.length == 0        
+    p No healthcheck has been defined
+  each hh in healthchecks
+    h3 Port scan #{hh.ip} #{hh.port}
+    if hh.status == "SUCCESS"
+      h4(class="lblsuccess") Port is opened
+    else       
+      h4(class="lblfailure") Port is closed
+      h4 Reason :
+      pre
+        code
+        | #{database.error}
 
 
 
