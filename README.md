@@ -2,13 +2,16 @@
 
 Docker image to display a basic web app with some additional health checks (DB, pings)
 
-[![Docker Image CI](https://github.com/sleroy/smoketest-docker-webserver/actions/workflows/docker-image.yml/badge.svg)](https://github.com/sleroy/smoketest-docker-webserver/actions/workflows/docker-image.yml)
+[![Docker Hub Image CI](https://github.com/sleroy/smoketest-docker-webserver/actions/workflows/docker-image.yml/badge.svg)](https://github.com/sleroy/smoketest-docker-webserver/actions/workflows/docker-image.yml)
 
 [![Node.js CI](https://github.com/sleroy/smoketest-docker-webserver/actions/workflows/node.js.yml/badge.svg)](https://github.com/sleroy/smoketest-docker-webserver/actions/workflows/node.js.yml)
 
 [![CodeQL](https://github.com/sleroy/smoketest-docker-webserver/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/sleroy/smoketest-docker-webserver/actions/workflows/github-code-scanning/codeql)
 
+Docker hub page : [Dockerhub page](https://hub.docker.com/repository/docker/sylvainleroy/smoketest-docker-webserver)
+
 ![Screenshot](./screenshot.png)
+
 
 ## Overview
 
